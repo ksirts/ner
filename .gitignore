@@ -1,0 +1,4 @@
+*.out
+wandb/
+output/
+models/
