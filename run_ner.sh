@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --job-name=estner
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=kairit.sirts@gmail.com
+#SBATCH --mail-user=chenghan.chung@ut.ee
 #SBATCH --time 1-00:00:00
 #SBATCH --mem=20000
 #SBATCH --output=R-%x.%j.out
