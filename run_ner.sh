@@ -13,7 +13,7 @@ source $HOME/estbert_venv/bin/activate
 wandb login
 WANDB_PROJECT=EstNewNER
 
-CONFIG_PATH=$1
+CONFIG_PATH=config/new_ner_config.json
 
 python run_ner.py $CONFIG_PATH
     
