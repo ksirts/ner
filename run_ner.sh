@@ -9,9 +9,10 @@
 #SBATCH --output=R-%x.%j.out
 
 source $HOME/estbert_venv/bin/activate
+
 module load git-lfs/2.11.0
 git lfs install
-
+git lfs pull
 
 wandb login
 WANDB_PROJECT=EstNewNER
