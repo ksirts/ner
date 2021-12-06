@@ -2,3 +2,4 @@
 wandb/
 output/
 models/
+*venv*/
