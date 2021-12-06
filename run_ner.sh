@@ -9,6 +9,7 @@
 #SBATCH --output=R-%x.%j.out
 
 source $HOME/estbert_venv/bin/activate
+module load git-lfs/2.11.0
 
 wandb login
 WANDB_PROJECT=EstNewNER
