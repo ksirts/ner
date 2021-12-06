@@ -9,7 +9,7 @@
 #SBATCH --mem=20000
 #SBATCH --output=R-%x.%j.out
 
-source $HOME/estbert/bin/activate
+source $HOME/estbert_venv/bin/activate
 
 wandb login
 WANDB_PROJECT=EstNewNER
