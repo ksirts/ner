@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:tesla:6
+#SBATCH --gres=gpu:1
 #SBATCH --job-name=estner
 #SBATCH --mail-type=ALL
 #SBATCH --time 1-00:00:00
