@@ -10,9 +10,13 @@
 
 source $HOME/estbert_venv/bin/activate
 
-module load git-lfs/2.11.0
-git lfs install
-git clone https://huggingface.co/tartuNLP/EstBERT
+DIR="EstBERT/"
+if [ -d "$DIR" ]; then
+else
+   module load git-lfs/2.11.0
+   git lfs install
+   git clone https://huggingface.co/tartuNLP/EstBERT
+fi
 
 wandb login
 WANDB_PROJECT=EstNewNER
