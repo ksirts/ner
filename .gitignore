@@ -3,3 +3,4 @@ wandb/
 output/
 models/
 *venv*/
+log/
