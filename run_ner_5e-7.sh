@@ -14,6 +14,6 @@ wandb login
 WANDB_PROJECT=EstNewNER
 
 
-CONFIG_PATH=$HOME/ner/config/new_ner_config_5e-7.json
+CONFIG_PATH=config/new_ner_config_5e-7.json
 
 python run_ner.py $CONFIG_PATH
