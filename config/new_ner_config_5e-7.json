@@ -24,8 +24,6 @@
     "logging_steps": 100,
     "save_strategy": "epoch",
     "seed": 4378,
-    "fp16": "True",
-    "fp16_full_eval": "False",
     "run_name": "ner_estbert128_b16_lr5e-7_s4378",
     "load_best_model_at_end": "True",
     "metric_for_best_model": "eval_f1",
