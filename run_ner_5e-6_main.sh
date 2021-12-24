@@ -8,7 +8,7 @@
 #SBATCH --mem=20000
 #SBATCH --output=R-%x.%j.out
 
-module load python/3.6.3/virtenv
+module load python/3.8.6
 source venv/bin/activate
 
 wandb login
