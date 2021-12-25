@@ -118,9 +118,9 @@ class EstNER(datasets.GeneratorBasedBuilder):
             guid = 0
             tokens = []
             ner_tags = []
-            for doc in data['documents']:
-                for sent in doc['sentences']:
-                    for word in sent['words']:
+            for doc in data:
+                for sent in doc:
+                    for word in sent:
                         tokens.append(word['word'])
                         ner_tags.append(word['ner_1'])
                     yield guid, {
