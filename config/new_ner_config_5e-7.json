@@ -17,7 +17,7 @@
     "adam_beta1": 0.9,
     "adam_beta2": 0.98,
     "adam_epsilon": 1e-6,
-    "num_train_epochs": 100,
+    "num_train_epochs": 150,
     "lr_scheduler_type": "polynomial",
     "logging_strategy": "epoch",
     "logging_first_step": "True",

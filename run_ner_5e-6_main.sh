@@ -14,6 +14,6 @@ source venv/bin/activate
 wandb login
 WANDB_PROJECT=EstNewNER
 
-CONFIG_PATH=config/new_ner_config_main_5e-6.json
+CONFIG_PATH=config/ner_config_main_5e-6.json
 
 python run_ner_main.py $CONFIG_PATH
