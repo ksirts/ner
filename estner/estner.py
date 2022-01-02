@@ -127,20 +127,21 @@ class EstNER(datasets.GeneratorBasedBuilder):
     def _generate_examples(self, filepath):
         logger.info("⏳ Generating examples from = %s", filepath)
         with open(filepath, encoding="utf-8") as f:
-            data = json.load(f)
+            row_data = json.load(f)
             guid = 0
             tokens = []
             ner_tags = []
-            for doc in data['documents']:
-                for sent in doc['sentences']:
-                    for word in sent['words']:
-                        tokens.append(word['word'])
-                        ner_tags.append(word['ner_1'])
-                    yield guid, {
-                        "id": str(guid),
-                        "tokens": tokens,
-                        "ner_tags": ner_tags,
-                        }
-                    guid += 1
-                    tokens = []
-                    ner_tags = []
+            for data in row_data:
+                for doc in data['documents']:
+                    for sent in doc['sentences']:
+                        for word in sent['words']:
+                            tokens.append(word['word'])
+                            ner_tags.append(word['ner_1'])
+                        yield guid, {
+                            "id": str(guid),
+                            "tokens": tokens,
+                            "ner_tags": ner_tags,
+                            }
+                        guid += 1
+                        tokens = []
+                        ner_tags = []
