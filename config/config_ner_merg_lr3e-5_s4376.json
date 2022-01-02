@@ -23,10 +23,10 @@
     "logging_first_step": "True",
     "logging_steps": 150,
     "save_strategy": "epoch",
-    "seed": 6891,
+    "seed": 4376,
     "fp16": "True",
     "fp16_full_eval": "False",
-    "run_name": "ner_estbert_new_b16_lr3e-5_s6891",
+    "run_name": "ner_estbert_merg_b16_lr3e-5_s4376",
     "load_best_model_at_end": "True",
     "metric_for_best_model": "eval_f1",
     "return_tag_level_metrics": "False"
