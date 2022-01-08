@@ -6,7 +6,7 @@
     "do_train": "True",
     "do_eval": "True",
     "do_predict": "True",
-    "output_dir": "/gpfs/space/home/chenghan/ner/output/merg_ner/estbert_128/all_entities/1",
+    "output_dir": "/gpfs/space/home/chenghan/ner/output/new_ner/lr3e5s1024",
     "overwrite_output_dir": "True",
     "report_to": "wandb",
     "evaluation_strategy": "epoch",
@@ -23,11 +23,12 @@
     "logging_first_step": "True",
     "logging_steps": 150,
     "save_strategy": "epoch",
-    "seed": 4376,
+    "seed": 1024,
     "fp16": "True",
     "fp16_full_eval": "False",
-    "run_name": "ner_estbert_merg_b16_lr3e-5_s4376",
+    "run_name": "ner_estbert_new_b16_lr3e-5_s1024",
     "load_best_model_at_end": "True",
     "metric_for_best_model": "eval_f1",
-    "return_tag_level_metrics": "False"
+    "return_tag_level_metrics": "False",
+    "save_total_limit": 3
 }
