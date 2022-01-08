@@ -6,7 +6,7 @@
     "do_train": "True",
     "do_eval": "True",
     "do_predict": "True",
-    "output_dir": "/gpfs/space/home/chenghan/ner/output/new_ner/estbert_128/all_entities/1",
+    "output_dir": "/gpfs/space/home/chenghan/ner/output/new_ner/lr3e5s7849",
     "overwrite_output_dir": "True",
     "report_to": "wandb",
     "evaluation_strategy": "epoch",
@@ -29,5 +29,6 @@
     "run_name": "ner_estbert_new_b16_lr3e-5_s7849",
     "load_best_model_at_end": "True",
     "metric_for_best_model": "eval_f1",
-    "return_tag_level_metrics": "False"
+    "return_tag_level_metrics": "False",
+    "save_total_limit": 3
 }
