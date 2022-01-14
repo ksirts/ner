@@ -31,17 +31,17 @@ a separate line and there is an empty line after each sentence. The first item o
 The named entity tags use the BIO format, which means that the first word in a named entity has the B_TYPE tag and the following words have the I_TYPE tag. A word with tag O is not part of a named entity. 
 """
 
-# # main dataset
-# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
-# _TRAINING_FILE = "EstNER_v1_train.json"
-# _DEV_FILE = "EstNER_v1_dev.json"
-# _TEST_FILE = "EstNER_v1_test.json"
+# main dataset
+_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
+_TRAINING_FILE = "EstNER_v1_train.json"
+_DEV_FILE = "EstNER_v1_dev.json"
+_TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
-_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
-_TRAINING_FILE = "EstNER_new_train.json"
-_DEV_FILE = "EstNER_new_dev.json"
-_TEST_FILE = "EstNER_new_test.json"
+# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
+# _TRAINING_FILE = "EstNER_new_train.json"
+# _DEV_FILE = "EstNER_new_dev.json"
+# _TEST_FILE = "EstNER_new_test.json"
 
 # merge new and main dataset
 # _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
