@@ -2,7 +2,7 @@
 
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
-#SBATCH --job-name=m57s6730
+#SBATCH --job-name=m56s5974
 #SBATCH --mail-type=ALL
 #SBATCH --time 1-00:00:00
 #SBATCH --mem=20000
@@ -14,6 +14,6 @@ source venv/bin/activate
 wandb login
 WANDB_PROJECT=EstNewNER
 
-CONFIG_PATH=config/config_ner_main_lr5e-6_s6730.json
+CONFIG_PATH=config/config_ner_main_lr5e-6_s5974.json
 
 python run_ner_main.py $CONFIG_PATH

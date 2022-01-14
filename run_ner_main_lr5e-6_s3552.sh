@@ -2,7 +2,7 @@
 
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
-#SBATCH --job-name=m57s3552
+#SBATCH --job-name=m56s3552
 #SBATCH --mail-type=ALL
 #SBATCH --time 1-00:00:00
 #SBATCH --mem=20000
