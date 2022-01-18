@@ -32,10 +32,10 @@ The named entity tags use the BIO format, which means that the first word in a n
 """
 
 # main dataset
-_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
-_TRAINING_FILE = "EstNER_v1_train.json"
-_DEV_FILE = "EstNER_v1_dev.json"
-_TEST_FILE = "EstNER_v1_test.json"
+# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
+# _TRAINING_FILE = "EstNER_v1_train.json"
+# _DEV_FILE = "EstNER_v1_dev.json"
+# _TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
 # _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
@@ -44,10 +44,10 @@ _TEST_FILE = "EstNER_v1_test.json"
 # _TEST_FILE = "EstNER_new_test.json"
 
 # merge new and main dataset
-# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
-# _TRAINING_FILE = "EstNER_merg_train.json"
-# _DEV_FILE = "EstNER_merg_dev.json"
-# _TEST_FILE = "EstNER_merg_test.json"
+_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
+_TRAINING_FILE = "EstNER_merg_train.json"
+_DEV_FILE = "EstNER_merg_dev.json"
+_TEST_FILE = "EstNER_merg_test.json"
 
 
 class EstNERConfig(datasets.BuilderConfig):
@@ -128,47 +128,47 @@ class EstNER(datasets.GeneratorBasedBuilder):
                                     "filepath": file_paths["test"]}),
         ]
 
-    # for merge data
-    # def _generate_examples(self, filepath):
-    #     logger.info("⏳ Generating examples from = %s", filepath)
-    #     with open(filepath, encoding="utf-8") as f:
-    #         row_data = json.load(f)
-    #         guid = 0
-    #         tokens = []
-    #         ner_tags = []
-    #         for data in row_data:
-    #             for doc in data['documents']:
-    #                 for sent in doc['sentences']:
-    #                     for word in sent['words']:
-    #                         tokens.append(word['word'])
-    #                         ner_tags.append(word['ner_1'])
-    #                     yield guid, {
-    #                         "id": str(guid),
-    #                         "tokens": tokens,
-    #                         "ner_tags": ner_tags,
-    #                         }
-    #                     guid += 1
-    #                     tokens = []
-    #                     ner_tags = []
-    
-    # main and new
+    # for joint data
     def _generate_examples(self, filepath):
         logger.info("⏳ Generating examples from = %s", filepath)
         with open(filepath, encoding="utf-8") as f:
-            data = json.load(f)
+            row_data = json.load(f)
             guid = 0
             tokens = []
             ner_tags = []
-            for doc in data['documents']:
-                for sent in doc['sentences']:
-                    for word in sent['words']:
-                        tokens.append(word['word'])
-                        ner_tags.append(word['ner_1'])
-                    yield guid, {
-                        "id": str(guid),
-                        "tokens": tokens,
-                        "ner_tags": ner_tags,
-                    }
-                    guid += 1
-                    tokens = []
-                    ner_tags = []
+            for data in row_data:
+                for doc in data['documents']:
+                    for sent in doc['sentences']:
+                        for word in sent['words']:
+                            tokens.append(word['word'])
+                            ner_tags.append(word['ner_1'])
+                        yield guid, {
+                            "id": str(guid),
+                            "tokens": tokens,
+                            "ner_tags": ner_tags,
+                            }
+                        guid += 1
+                        tokens = []
+                        ner_tags = []
+    
+    # main and new
+    # def _generate_examples(self, filepath):
+    #     logger.info("⏳ Generating examples from = %s", filepath)
+    #     with open(filepath, encoding="utf-8") as f:
+    #         data = json.load(f)
+    #         guid = 0
+    #         tokens = []
+    #         ner_tags = []
+    #         for doc in data['documents']:
+    #             for sent in doc['sentences']:
+    #                 for word in sent['words']:
+    #                     tokens.append(word['word'])
+    #                     ner_tags.append(word['ner_1'])
+    #                 yield guid, {
+    #                     "id": str(guid),
+    #                     "tokens": tokens,
+    #                     "ner_tags": ner_tags,
+    #                 }
+    #                 guid += 1
+    #                 tokens = []
+    #                 ner_tags = []
