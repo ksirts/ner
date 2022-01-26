@@ -401,8 +401,7 @@ def main():
 
     # Metrics
     #TODO: rewrite the evaluation metric part
-    experiment_id = sys.argv[1].split('.')[0]
-    metric = load_metric("seqeval", experiment_id=experiment_id)
+    metric = load_metric("seqeval", experiment_id=training_args.run_name)
 
     def compute_metrics(p):
         predictions, labels = p
