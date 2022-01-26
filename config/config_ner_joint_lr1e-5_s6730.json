@@ -1,6 +1,6 @@
 {
     "model_name_or_path": "tartuNLP/EstBERT",
-    "cache_dir": "/gpfs/space/home/chenghan/ner/models",
+    "cache_dir": "/gpfs/space/home/chenghan/ner/models/s6730",
     "dataset_name": "estner",
     "max_seq_length": 128,
     "do_train": "True",
