@@ -34,7 +34,7 @@ The named entity tags use the BIO format, which means that the first word in a n
 # main dataset
 # _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
 # _TRAINING_FILE = "EstNER_v1_train.json"
-# _DEV_FILE = "EstNER_v1_dev.json"
+_DEV_FILE = "EstNER_v1_dev.json"
 # _TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
@@ -46,7 +46,7 @@ The named entity tags use the BIO format, which means that the first word in a n
 # merge new and main dataset
 _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
 _TRAINING_FILE = "EstNER_merg_train.json"
-_DEV_FILE = "EstNER_merg_dev.json"
+# _DEV_FILE = "EstNER_merg_dev.json"
 _TEST_FILE = "EstNER_merg_test.json"
 
 
