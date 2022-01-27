@@ -32,15 +32,15 @@ The named entity tags use the BIO format, which means that the first word in a n
 """
 
 # main dataset
-_MAIN_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
+# _MAIN_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
 # _TRAINING_FILE = "EstNER_v1_train.json"
-_DEV_FILE = "EstNER_v1_dev.json"
+# _DEV_FILE = "EstNER_v1_dev.json"
 # _TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
-# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
+NEW_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
 # _TRAINING_FILE = "EstNER_new_train.json"
-# _DEV_FILE = "EstNER_new_dev.json"
+_DEV_FILE = "EstNER_new_dev.json"
 # _TEST_FILE = "EstNER_new_test.json"
 
 # merge new and main dataset
@@ -115,7 +115,7 @@ class EstNER(datasets.GeneratorBasedBuilder):
         """Returns SplitGenerators."""
         file_paths = {
             "train": os.path.join(_PATH, _TRAINING_FILE),
-            "dev": os.path.join(_MAIN_PATH, _DEV_FILE),
+            "dev": os.path.join(NEW_PATH, _DEV_FILE),
             "test": os.path.join(_PATH, _TEST_FILE),
         }
 
