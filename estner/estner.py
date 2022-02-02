@@ -32,10 +32,10 @@ The named entity tags use the BIO format, which means that the first word in a n
 """
 
 # main dataset
-# _MAIN_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
-# _TRAINING_FILE = "EstNER_v1_train.json"
-# _DEV_FILE = "EstNER_v1_dev.json"
-# _TEST_FILE = "EstNER_v1_test.json"
+_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
+_TRAINING_FILE = "EstNER_v1_train.json"
+_DEV_FILE = "EstNER_v1_dev.json"
+_TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
 # NEW_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
@@ -50,10 +50,10 @@ The named entity tags use the BIO format, which means that the first word in a n
 # _TEST_FILE = "EstNER_merg_test.json"
 
 # remove some entities lables
-_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_token"
-_TRAINING_FILE = "EstNER_token_train.json"
-_DEV_FILE = "EstNER_token_dev.json"
-_TEST_FILE = "EstNER_token_test.json"
+# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_token"
+# _TRAINING_FILE = "EstNER_token_train.json"
+# _DEV_FILE = "EstNER_token_dev.json"
+# _TEST_FILE = "EstNER_token_test.json"
 
 
 class EstNERConfig(datasets.BuilderConfig):
