@@ -32,16 +32,16 @@ The named entity tags use the BIO format, which means that the first word in a n
 """
 
 # main dataset
-_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
-_TRAINING_FILE = "EstNER_v1_train.json"
-_DEV_FILE = "EstNER_v1_dev.json"
-_TEST_FILE = "EstNER_v1_test.json"
+# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_main"
+# _TRAINING_FILE = "EstNER_v1_train.json"
+# _DEV_FILE = "EstNER_v1_dev.json"
+# _TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
-# NEW_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
-# _TRAINING_FILE = "EstNER_new_train.json"
-# _DEV_FILE = "EstNER_new_dev.json"
-# _TEST_FILE = "EstNER_new_test.json"
+_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
+_TRAINING_FILE = "EstNER_new_train.json"
+_DEV_FILE = "EstNER_new_dev.json"
+_TEST_FILE = "EstNER_new_test.json"
 
 # merge new and main dataset
 # _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
