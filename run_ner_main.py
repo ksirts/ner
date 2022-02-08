@@ -510,6 +510,7 @@ def main():
         trainer.save_metrics("predict", metrics)
 
         # Save predictions
+        # Todo:Modify output vlidation prediciont
         output_predictions_file = os.path.join(
             training_args.output_dir, "predictions.txt")
         if trainer.is_world_process_zero():
