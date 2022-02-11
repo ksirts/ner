@@ -38,22 +38,16 @@ The named entity tags use the BIO format, which means that the first word in a n
 # _TEST_FILE = "EstNER_v1_test.json"
 
 # new dataset
-_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
-_TRAINING_FILE = "EstNER_new_train.json"
-_DEV_FILE = "EstNER_new_dev.json"
-_TEST_FILE = "EstNER_new_test.json"
+# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_new"
+# _TRAINING_FILE = "EstNER_new_train.json"
+# _DEV_FILE = "EstNER_new_dev.json"
+# _TEST_FILE = "EstNER_new_test.json"
 
-# merge new and main dataset
-# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_merg"
-# _TRAINING_FILE = "EstNER_merg_train.json"
-# _DEV_FILE = "EstNER_merg_dev.json"
-# _TEST_FILE = "EstNER_merg_test.json"
-
-# remove some entities lables
-# _PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_token"
-# _TRAINING_FILE = "EstNER_token_train.json"
-# _DEV_FILE = "EstNER_token_dev.json"
-# _TEST_FILE = "EstNER_token_test.json"
+# Joint dataset
+_PATH = "/gpfs/space/home/chenghan/ner/data/EstNER_joint"
+_TRAINING_FILE = "EstNER_joint_train.json"
+_DEV_FILE = "EstNER_joint_dev.json"
+_TEST_FILE = "EstNER_joint_test.json"
 
 
 class EstNERConfig(datasets.BuilderConfig):
