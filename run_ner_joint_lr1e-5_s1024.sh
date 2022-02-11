@@ -9,7 +9,7 @@
 #SBATCH --output=R-%x.%j.out
 
 module load python/3.8.6
-source py_venv/venv_s1024/bin/activate
+source venv/bin/activate
 
 wandb login
 WANDB_PROJECT=EstNewNER
