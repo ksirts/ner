@@ -6,7 +6,7 @@
     "do_train": "True",
     "do_eval": "True",
     "do_predict": "True",
-    "output_dir": "/gpfs/space/home/chenghan/ner/output/new_ner/lr1e5s1024",
+    "output_dir": "/gpfs/space/home/chenghan/ner/output/joint_ner/lr1e5s1024",
     "overwrite_output_dir": "True",
     "report_to": "wandb",
     "evaluation_strategy": "epoch",
