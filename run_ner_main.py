@@ -493,10 +493,9 @@ def main():
         trainer.save_metrics("eval", metrics)
 
         #TODO: Modify output vlidation prediciont
-        validations, labels, metrics = trainer.evaluate(
-            eval_dataset, metric_key_prefix="evaluate")
+        validations, labels, *_ = trainer.evaluate(eval_dataset)
         validations = np.argmax(validations, axis=2)
-        
+
         # Remove ignored index (special tokens)
         true_validations = [
             [label_list[p] for (p, l) in zip(validation, label) if l != -100]
@@ -535,8 +534,7 @@ def main():
             with open(output_predictions_file, "w") as writer:
                 for prediction in true_predictions:
                     writer.write(" ".join(prediction) + "\n")
-    
-    
+
     # Generate README file
     kwargs = {"finetuned_from": model_args.model_name_or_path,
               "tasks": "token-classification"}
