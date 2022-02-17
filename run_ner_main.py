@@ -494,7 +494,7 @@ def main():
 
         #TODO: Modify output vlidation prediciont
         validations, labels, *_ = trainer.evaluate(eval_dataset)
-        validations = np.argmax(validations, axis=2)
+        validations = np.argmax(validations)
 
         # Remove ignored index (special tokens)
         true_validations = [
