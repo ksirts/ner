@@ -493,22 +493,22 @@ def main():
         trainer.save_metrics("eval", metrics)
 
         #TODO: Modify output vlidation prediciont
-        validations, labels, *_ = trainer.evaluate(eval_dataset)
-        validations = np.argmax(validations)
+        # validations, labels, *_ = trainer.evaluate(eval_dataset)
+        # validations = np.argmax(validations)
 
-        # Remove ignored index (special tokens)
-        true_validations = [
-            [label_list[p] for (p, l) in zip(validation, label) if l != -100]
-            for validation, label in zip(validations, labels)
-        ]
+        # # Remove ignored index (special tokens)
+        # true_validations = [
+        #     [label_list[p] for (p, l) in zip(validation, label) if l != -100]
+        #     for validation, label in zip(validations, labels)
+        # ]
 
-        # Save validations
-        output_validations_file = os.path.join(
-            training_args.output_dir, "validations.txt")
-        if trainer.is_world_process_zero():
-            with open(output_validations_file, "w") as writer:
-                for validation in true_validations:
-                    writer.write(" ".join(validation) + "\n")
+        # # Save validations
+        # output_validations_file = os.path.join(
+        #     training_args.output_dir, "validations.txt")
+        # if trainer.is_world_process_zero():
+        #     with open(output_validations_file, "w") as writer:
+        #         for validation in true_validations:
+        #             writer.write(" ".join(validation) + "\n")
 
     # Predict
     if training_args.do_predict:
